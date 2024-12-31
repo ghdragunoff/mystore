@@ -6,10 +6,10 @@ services:
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
     volumes:
-      - ${APP_DATA_DIR}/db:/var/lib/mysql
+      - ~/umbrel/app-data/nextcloud/db:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=${APP_DB_ROOT_PASSWORD}
-      - MYSQL_PASSWORD=${APP_DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=mbrlOFF~997156
+      - MYSQL_PASSWORD=mbrlOFF~997156
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
 
@@ -21,19 +21,19 @@ services:
     links:
       - db
     volumes:
-      - ${APP_DATA_DIR}/nextcloud:/var/www/html
-      - ${APP_DATA_DIR}/apps:/var/www/html/custom_apps
-      - ${APP_DATA_DIR}/config:/var/www/html/config
-      - ${APP_DATA_DIR}/data:/var/www/html/data
+      - ~/umbrel/app-data/nextcloud/nextcloud:/var/www/html
+      - ~/umbrel/app-data/nextcloud/apps:/var/www/html/custom_apps
+      - ~/umbrel/app-data/nextcloud/config:/var/www/html/config
+      - ~/umbrel/app-data/nextcloud/data:/var/www/html/data
     environment:
       - NEXTCLOUD_DATA_DIR=/var/www/html/data
-      - MYSQL_PASSWORD=${APP_DB_PASSWORD}
+      - MYSQL_PASSWORD=mbrlOFF~997156
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
       - MYSQL_HOST=db
-      - NEXTCLOUD_ADMIN_USER=${APP_NEXTCLOUD_ADMIN}
-      - NEXTCLOUD_ADMIN_PASSWORD=${APP_NEXTCLOUD_PASSWORD}
-      - NEXTCLOUD_TRUSTED_DOMAINS=${APP_DOMAIN} localhost
+      - NEXTCLOUD_ADMIN_USER=umbrel
+      - NEXTCLOUD_ADMIN_PASSWORD=qwe123qwe
+      - NEXTCLOUD_TRUSTED_DOMAINS=umbrel.local localhost
       - TZ=Europe/Moscow
 
 volumes:
