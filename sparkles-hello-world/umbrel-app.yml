@@ -1,27 +1,55 @@
-manifestVersion: 1
+manifestVersion: 1.1
 id: nextcloud
+category: files
 name: Nextcloud
-tagline: My storage
-icon: https://upload.wikimedia.org/wikipedia/commons/6/60/Nextcloud_Logo.svg
-category: Files
-version: "27.1.3"
-port: 9090
+version: "30.0.0"
+tagline: Productivity platform that keeps you in control
 description: >-
-  Add your app's description here.
+  Nextcloud puts your data at your fingertips, under your control.
+  Store your documents, calendar, contacts and photos on your Umbrel instead of
+  some company's data center. Features:
 
 
-  You can also add newlines!
+  - Mobile and desktop sync 
 
-developer: Nextcloud
-website: https://nextcloud.com/
-submitter: Umbrel
-submission: https://github.com/getumbrel/umbrel-hello-world-app
-repo: https://github.com/nextcloud/server
-support: https://help.nextcloud.com
+  - Versioning and undelete 
+
+  - Galleries and activity feed 
+
+  - File editing and preview support for PDF, images, text files, Open Document, Word files and more. 
+
+  - Smooth performance and easy user interface. 
+
+  - Fine-grained control over access to data and sharing capabilities by user and by group.
+
+
+  Note: After logging in to Nextcloud please change the password to something secure before sharing the address with anyone.
 releaseNotes: >-
-  Add what's new in the latest version of your app here.
-dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+  Nextcloud version 30 introduces a range of new features, improvements, and enhancements across various apps and core functionalities. Key updates include:
+    - File management improvements
+    - Sharing and collaboration enhancements
+    - User management and security upgrades
+    - Theming and user interface updates
+    - Calendar and contacts enhancements
+    - Developer tools and API improvements
+    - Performance and security enhancements
+    - Photos app improvements
+    - Text app enhancements
 
+  Full release notes can be found at https://github.com/nextcloud/server/releases
+developer: Nextcloud GmbH
+website: https://nextcloud.com
+dependencies: []
+repo: https://github.com/nextcloud/server
+support: https://help.nextcloud.com/categories
+port: 8081
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: umbrel
+deterministicPassword: true
+torOnly: false
+submitter: Umbrel
+submission: https://github.com/getumbrel/umbrel/commit/dcaae95daa8ee3d7e8044d55d13887d8ff353030
